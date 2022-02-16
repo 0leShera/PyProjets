@@ -38,7 +38,8 @@ def index_3():
 
     return jsonify(resp)
 
-@app.route("/test_method_yo", methods=["YO", "POST"])
+
+@app.route("/test_method_hello", methods=["HELLO", "POST"])
 def index_4():
 
     if request.method == "POST":
@@ -49,24 +50,14 @@ def index_4():
 
         p4 = request.args.get("salary")
 
-        resp = {"y_name": p2,
-                "y_salary": p1,
-                "y_salary_4_years": p1 * 5,
-                "y_age": p3,
-                "y_url_salary": p4}
+        resp = {"h_name": p2,
+                "h_salary": p1,
+                "h_salary_4_years": p1 * 5,
+                "h_age": p3,
+                "h_url_salary": p4}
 
         return jsonify(resp)
 
-    elif request.method == "YO":
-        return "Yolochka"
-
-
-# pip install virtualenv -- один раз
-#
-# virtualenv venv -- создаем окружение
-# source venv/bin/activate  -- активируем
-# export FLASK_APP = main_flask.py  -- экспортирем этот файл
-# flask run --host="0.0.0.0" --port="5077" -- запуск после изменений ctrl+c и снова run
-#
-# deactivate -- так деактивирем в конце
+    elif request.method == "HELLO":
+        return "Hello world!"
 
