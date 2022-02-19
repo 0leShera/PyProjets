@@ -23,3 +23,5 @@ flask run --host="0.0.0.0" --port="5077"
 После внесения изменений в файл main_flask.py и их сохранения
 Нажать ctrl + c. Затем заново запустить командой:
 flask run --host="0.0.0.0" --port="5077"
+
+export FLASK_ENV=development
